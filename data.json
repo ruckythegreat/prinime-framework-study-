@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "konosuba",
+    "poster": "img/konosuba.jpeg",
+    "description": "Petualangan seorang pria yang bereinkarnasi ke dunia fantasi dan bertekad menjalani hidup tanpa penyesalan.",
+    "link": "https://www.youtube.com/embed/jEKCng9094A",
+    "episodes": [
+      "https://www.youtube.com/embed/jEKCng9094A",
+      "https://www.youtube.com/embed/lK0jnEpg_A4",
+      "https://www.youtube.com/embed/LefS2CqNkUk"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Demon Slayer: Mugen Train",
+    "poster": "img/dsmt.jpeg",
+    "description": "Tanjiro dan kawan-kawan menghadapi iblis di kereta misterius yang mengancam nyawa banyak orang.",
+    "link": "https://www.youtube.com/embed/ATJYac_dORw",
+    "episodes": [
+      "https://www.youtube.com/embed/ATJYac_dORw"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Your Name",
+    "poster": "img/yourname.jpeg",
+    "description": "Kisah romantis dan fantasi tentang dua jiwa yang saling bertukar tubuh dan takdir mereka yang terhubung oleh waktu.",
+    "link": "https://www.youtube.com/embed/xU47nhruN-Q",
+    "episodes": [
+      "https://www.youtube.com/embed/xU47nhruN-Q"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Boku no Hero Academia",
+    "poster": "img/bokunohero.jpeg",
+    "description": "Di dunia di mana sebagian besar manusia memiliki kekuatan super, seorang bocah tanpa kekuatan berjuang untuk menjadi pahlawan sejati.",
+    "link": "https://www.youtube.com/embed/wIb3nnOeves",
+    "episodes": [
+      "https://www.youtube.com/embed/wIb3nnOeves",
+      "https://www.youtube.com/embed/yv5G7Y1Uo1A"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Spy x Family",
+    "poster": "img/spyxfamily.jpeg",
+    "description": "Seorang mata-mata harus membentuk keluarga palsu untuk menjalankan misi, tanpa menyadari bahwa istri dan anaknya juga menyimpan rahasia besar.",
+    "link": "https://www.youtube.com/embed/CCXLUQzuigw",
+    "episodes": [
+      "https://www.youtube.com/embed/CCXLUQzuigw",
+      "https://www.youtube.com/embed/0iK5H6pZimE"
+    ]
+  }
+]

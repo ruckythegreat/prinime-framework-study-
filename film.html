@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prinime - Watch</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-950 text-white font-sans">
+  <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+    <div class="flex justify-between items-center px-6 py-4">
+      <h1 class="font-extrabold text-3xl text-cyan-400 tracking-tight">Prinime</h1>
+
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-lg font-semibold hover:text-cyan-400 transition duration-300">Home</a>
+        <a href="https://github.com/Nagiahmad" class="text-lg font-semibold hover:text-cyan-400 transition duration-300">Category</a>
+        <a href="#" class="text-lg font-semibold hover:text-cyan-400 transition duration-300">Search</a>
+        <button class="border-2 border-cyan-400 text-cyan-400 px-5 py-2 rounded-md font-bold transition duration-300 hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_#22d3ee]">
+          Sign up
+        </button>
+      </div>
+
+      <button id="menu-btn" class="md:hidden text-cyan-400 focus:outline-none text-3xl">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden flex-col items-center space-y-4 pb-5 bg-slate-900 md:hidden border-t border-slate-800">
+      <a href="index.html" class="text-lg font-semibold hover:text-cyan-400 transition duration-300">Home</a>
+      <a href="https://github.com/Nagiahmad" class="text-lg font-semibold hover:text-cyan-400 transition duration-300">Category</a>
+      <a href="#" class="text-lg font-semibold hover:text-cyan-400 transition duration-300">Search</a>
+      <button class="border-2 border-cyan-400 text-cyan-400 px-5 py-2 rounded-md font-bold transition duration-300 hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_#22d3ee]">
+        Sign up
+      </button>
+    </div>
+  </nav>
+
+  <!-- Konten utama -->
+  <main class="pt-28 px-5 md:px-16">
+    <div id="film-container" class="text-center"></div>
+  </main>
+
+  <script>
+    // Toggle menu di mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Ambil parameter ID dari URL
+    const params = new URLSearchParams(window.location.search);
+    const filmId = parseInt(params.get("id"));
+
+    // Ambil data film dari JSON
+    fetch('data.json')
+      .then(res => res.json())
+      .then(data => {
+        const film = data.find(f => f.id === filmId);
+        const container = document.getElementById('film-container');
+
+        if (!film) {
+          container.innerHTML = `<h2 class="text-3xl font-bold text-red-400">Film tidak ditemukan 😢</h2>`;
+          return;
+        }
+
+        // Tampilkan film
+        container.innerHTML = `
+          <h2 class="text-4xl font-bold mb-6">${film.title}</h2>
+          <div class="flex flex-col items-center">
+            <iframe id="video-frame" width="70%" height="480" 
+              src="${film.link}" 
+              title="${film.title}" 
+              class="rounded-2xl shadow-lg border border-slate-800 mb-8"
+              allowfullscreen
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+            </iframe>
+            <p class="text-gray-400 mb-6 max-w-2xl">${film.description}</p>
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">Episodes</h3>
+          <div id="episode-buttons" class="flex flex-wrap justify-center gap-4"></div>
+        `;
+
+        // tombol episode
+        const epContainer = document.getElementById('episode-buttons');
+        film.episodes.forEach((ep, index) => {
+          const button = document.createElement('button');
+          button.textContent = `Episode ${index + 1}`;
+          button.className = "border border-cyan-400 text-cyan-400 px-4 py-2 rounded-md hover:bg-cyan-400 hover:text-black transition duration-300";
+          button.addEventListener('click', () => {
+            document.getElementById('video-frame').src = ep;
+          });
+          epContainer.appendChild(button);
+        });
+      })
+      .catch(err => console.error("Gagal memuat data:", err));
+  </script>
+</body>
+</html>

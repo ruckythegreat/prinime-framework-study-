@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prinime | register</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body style="background-color: black; background-image: url('giphy1.webp'); background-size: 100%;">
+    <nav class="flex justify-between p-7 ">
+        <div>
+            <h1 class="font-extrabold text-4xl text-white">Prinime</h1>
+        </div>
+        <div id="menu-btn" class="hidden md:flex items-center space-x-8">
+            <a class="text-xl text-white font-bold " href="" onclick="">Home</a>
+            <a class="text-xl text-white font-bold m-5 " href="https://github.com/Nagiahmad">about</a>
+            <a class="text-xl text-white font-bold " href="">contact</a>
+            <button type="submit" class="border-2 border-white text-white px-5 py-2 m-2 rounded-md font-semibold
+        tracking-wide tracking-all duration-300 ease-in-out 
+        hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] focus:ring-2 focus:ring-white ">Sign up</button>
+        </div>
+
+        <!-- Tombol hamburger untuk mobile -->
+      <button id="menu-btn" class="md:hidden text-cyan-400 focus:outline-none text-3xl">
+        ☰
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden flex-col items-center space-y-4 pb-5 bg-slate-900 md:hidden border-t border-slate-800">
+      <a href="#" class="text-lg font-semibold hover:text-cyan-400 transition duration-300">Home</a>
+      <a href="https://github.com/Nagiahmad" class="text-lg font-semibold hover:text-cyan-400 transition duration-300">Category</a>
+      <a href="#" class="text-lg font-semibold hover:text-cyan-400 transition duration-300">Search</a>
+      <button class="border-2 border-cyan-400 text-cyan-400 px-5 py-2 rounded-md font-bold transition duration-300 hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_#22d3ee]">
+        Sign up
+      </button>
+    </div>
+    </nav>
+
+    <h1 class="font-extrabold text-5xl text-sky-800 text-center mt-30 ">Welcome to Prinime</h1>
+    <h1 class="font-bold text-center text-white ">let's find your favorite anime. If you want to support me at cemilan and food, you can register</h1>
+    <div class="flex justify-center mt-10">
+        <button type="submit" class="border-2 border-white text-white px-5 py-2 m-2 rounded-md font-semibold
+        tracking-wide tracking-all duration-300 ease-in-out 
+        hover:bg-white hover:text-black hover:shadow-[0_0_15px_white] focus:ring-2 focus:ring-white" onclick="window.location.href='homepage.html'">Let's explore</button>
+        <button type="submit" class="border-2 border-cyan-400 text-cyan-400 px-5 py-2 m-2 rounded-md font-semibold 
+         tracking-wide transition-all duration-300 ease-in-out
+         hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_15px_#22d3ee] focus:ring-2 focus:ring-cyan-300">Sign up</button>
+    </div>
+
+    <!-- <button
+  type="submit"
+  class="border-2 border-cyan-400 text-cyan-400 px-5 py-2 m-2 rounded-md font-semibold 
+         tracking-wide transition-all duration-300 ease-in-out
+         hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_15px_#22d3ee] focus:ring-2 focus:ring-cyan-300">
+  Sign up
+</button> -->
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    </script>
+</body>
+</html>
