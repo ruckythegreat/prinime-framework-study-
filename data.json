@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "konosuba",
+    "title": "Konosuba",
     "poster": "img/konosuba.jpeg",
     "description": "Petualangan seorang pria yang bereinkarnasi ke dunia fantasi dan bertekad menjalani hidup tanpa penyesalan.",
     "link": "https://www.youtube.com/embed/jEKCng9094A",
@@ -9,7 +9,10 @@
       "https://www.youtube.com/embed/jEKCng9094A",
       "https://www.youtube.com/embed/lK0jnEpg_A4",
       "https://www.youtube.com/embed/LefS2CqNkUk"
-    ]
+    ],
+    "category": "Comedy",
+    "rating": 8.5,
+    "year": 2016
   },
   {
     "id": 2,
@@ -19,7 +22,10 @@
     "link": "https://www.youtube.com/embed/ATJYac_dORw",
     "episodes": [
       "https://www.youtube.com/embed/ATJYac_dORw"
-    ]
+    ],
+    "category": "Action",
+    "rating": 9.5,
+    "year": 2020
   },
   {
     "id": 3,
@@ -29,7 +35,10 @@
     "link": "https://www.youtube.com/embed/xU47nhruN-Q",
     "episodes": [
       "https://www.youtube.com/embed/xU47nhruN-Q"
-    ]
+    ],
+    "category": "Romance",
+    "rating": 9.3,
+    "year": 2016
   },
   {
     "id": 4,
@@ -40,17 +49,23 @@
     "episodes": [
       "https://www.youtube.com/embed/wIb3nnOeves",
       "https://www.youtube.com/embed/yv5G7Y1Uo1A"
-    ]
+    ],
+    "category": "Action",
+    "rating": 9.0,
+    "year": 2016
   },
   {
     "id": 5,
     "title": "Spy x Family",
-    "poster": "img/spyxfamily.jpeg",
+    "poster": "img/test.jpg",
     "description": "Seorang mata-mata harus membentuk keluarga palsu untuk menjalankan misi, tanpa menyadari bahwa istri dan anaknya juga menyimpan rahasia besar.",
     "link": "https://www.youtube.com/embed/CCXLUQzuigw",
     "episodes": [
       "https://www.youtube.com/embed/CCXLUQzuigw",
       "https://www.youtube.com/embed/0iK5H6pZimE"
-    ]
+    ],
+    "category": "Action",
+    "rating": 9.2,
+    "year": 2022
   }
 ]
